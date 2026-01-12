@@ -175,25 +175,41 @@ class ClinicalDashboard {
     const ctx = document.getElementById('dqiTrendChart').getContext('2d');
     const trends = this.data.trends.dqi;
 
+    // Debug logging for chart data
+    console.log('[Dashboard] DQI Trend data:', trends);
+
+    // Calculate dynamic Y-axis range based on actual data
+    const values = trends.map(t => t.value);
+    const minValue = Math.min(...values);
+    const maxValue = Math.max(...values);
+    const yMin = Math.max(0, Math.floor(minValue / 10) * 10 - 10);
+    const yMax = Math.min(100, Math.ceil(maxValue / 10) * 10 + 10);
+
+    console.log('[Dashboard] Y-axis range:', yMin, '-', yMax, 'Values:', values);
+
     this.charts.dqiTrend = new Chart(ctx, {
       type: 'line',
       data: {
         labels: trends.map(t => new Date(t.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })),
         datasets: [{
           label: 'DQI %',
-          data: trends.map(t => t.value),
+          data: values,
           borderColor: '#3b82f6',
-          backgroundColor: 'rgba(59, 130, 246, 0.1)',
+          backgroundColor: 'rgba(59, 130, 246, 0.2)',
           fill: true,
           tension: 0.4,
-          pointRadius: 4,
-          pointBackgroundColor: '#3b82f6'
+          pointRadius: 6,
+          pointBackgroundColor: '#3b82f6',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          borderWidth: 3
         }, {
-          label: 'Target',
+          label: 'Target (95%)',
           data: trends.map(() => 95),
           borderColor: '#10b981',
           borderDash: [5, 5],
-          pointRadius: 0
+          pointRadius: 0,
+          borderWidth: 2
         }]
       },
       options: {
@@ -202,7 +218,14 @@ class ClinicalDashboard {
         plugins: {
           legend: {
             display: true,
-            labels: { color: '#94a3b8' }
+            labels: { color: '#94a3b8', font: { size: 11 } }
+          },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                return context.dataset.label + ': ' + context.parsed.y + '%';
+              }
+            }
           }
         },
         scales: {
@@ -211,10 +234,15 @@ class ClinicalDashboard {
             ticks: { color: '#94a3b8' }
           },
           y: {
-            min: 70,
-            max: 100,
+            min: yMin,
+            max: yMax,
             grid: { color: 'rgba(148, 163, 184, 0.1)' },
-            ticks: { color: '#94a3b8' }
+            ticks: {
+              color: '#94a3b8',
+              callback: function (value) {
+                return value + '%';
+              }
+            }
           }
         }
       }
