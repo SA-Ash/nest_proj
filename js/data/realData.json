@@ -1,0 +1,2824 @@
+{
+  "lastUpdated": "2026-01-08T21:46:14.386356",
+  "dataSource": "Real clinical trial data from 9 source files across 23 studies",
+  "governanceStatement": "AI components operate exclusively on validated, pre-computed metrics and do not perform clinical, statistical, or regulatory calculations.",
+  "queries": {
+    "total": 5578,
+    "open": 2618,
+    "closed": 2960,
+    "resolutionRate": 53.1,
+    "aging": {
+      "0-7 days": 2559,
+      "8-14 days": 1030,
+      "15-30 days": 964,
+      ">30 days": 1025
+    },
+    "source": "CPID_EDC_Metrics.Query Report - Cumulative"
+  },
+  "saes": {
+    "total": 26870,
+    "open": 12282,
+    "patientsWithOpenSAE": 5339,
+    "sitesWithOpenSAE": 1208,
+    "source": "SAE_Dashboard_DM + SAE_Dashboard_Safety"
+  },
+  "regions": {
+    "AMERICA": {
+      "countries": {
+        "USA": {
+          "sites": {
+            "Site 28": {
+              "total_queries": 8,
+              "open_queries": 2,
+              "patients": 3
+            },
+            "Site 29": {
+              "total_queries": 6,
+              "open_queries": 4,
+              "patients": 1
+            },
+            "Site 451": {
+              "total_queries": 8,
+              "open_queries": 2,
+              "patients": 3
+            },
+            "Site 32": {
+              "total_queries": 4,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 36": {
+              "total_queries": 3,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 452": {
+              "total_queries": 7,
+              "open_queries": 7,
+              "patients": 1
+            },
+            "Site 453": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 3
+            },
+            "Site 38": {
+              "total_queries": 17,
+              "open_queries": 11,
+              "patients": 6
+            },
+            "Site 40": {
+              "total_queries": 12,
+              "open_queries": 12,
+              "patients": 3
+            },
+            "Site 454": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 455": {
+              "total_queries": 20,
+              "open_queries": 2,
+              "patients": 6
+            },
+            "Site 42": {
+              "total_queries": 13,
+              "open_queries": 7,
+              "patients": 2
+            },
+            "Site 457": {
+              "total_queries": 11,
+              "open_queries": 10,
+              "patients": 1
+            },
+            "Site 458": {
+              "total_queries": 8,
+              "open_queries": 7,
+              "patients": 2
+            },
+            "Site 326": {
+              "total_queries": 50,
+              "open_queries": 27,
+              "patients": 5
+            },
+            "Site 21": {
+              "total_queries": 35,
+              "open_queries": 14,
+              "patients": 4
+            },
+            "Site 546": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 109": {
+              "total_queries": 25,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 597": {
+              "total_queries": 5,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 2": {
+              "total_queries": 151,
+              "open_queries": 140,
+              "patients": 63
+            },
+            "Site 3": {
+              "total_queries": 23,
+              "open_queries": 20,
+              "patients": 10
+            },
+            "Site 601": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 602": {
+              "total_queries": 59,
+              "open_queries": 14,
+              "patients": 19
+            },
+            "Site 603": {
+              "total_queries": 29,
+              "open_queries": 23,
+              "patients": 2
+            },
+            "Site 604": {
+              "total_queries": 4,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 599": {
+              "total_queries": 5,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 605": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 3
+            },
+            "Site 608": {
+              "total_queries": 4,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 609": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 610": {
+              "total_queries": 33,
+              "open_queries": 0,
+              "patients": 5
+            },
+            "Site 611": {
+              "total_queries": 24,
+              "open_queries": 6,
+              "patients": 5
+            },
+            "Site 612": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 613": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 614": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 615": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 617": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 618": {
+              "total_queries": 7,
+              "open_queries": 4,
+              "patients": 1
+            },
+            "Site 620": {
+              "total_queries": 14,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 621": {
+              "total_queries": 16,
+              "open_queries": 1,
+              "patients": 7
+            },
+            "Site 622": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 782": {
+              "total_queries": 14,
+              "open_queries": 3,
+              "patients": 4
+            },
+            "Site 18": {
+              "total_queries": 20,
+              "open_queries": 8,
+              "patients": 4
+            },
+            "Site 19": {
+              "total_queries": 63,
+              "open_queries": 50,
+              "patients": 3
+            },
+            "Site 20": {
+              "total_queries": 45,
+              "open_queries": 32,
+              "patients": 4
+            },
+            "Site 22": {
+              "total_queries": 4,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 23": {
+              "total_queries": 18,
+              "open_queries": 4,
+              "patients": 2
+            },
+            "Site 24": {
+              "total_queries": 8,
+              "open_queries": 8,
+              "patients": 1
+            },
+            "Site 783": {
+              "total_queries": 7,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 784": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 575": {
+              "total_queries": 9,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 1018": {
+              "total_queries": 21,
+              "open_queries": 0,
+              "patients": 4
+            },
+            "Site 178": {
+              "total_queries": 15,
+              "open_queries": 3,
+              "patients": 5
+            },
+            "Site 327": {
+              "total_queries": 10,
+              "open_queries": 4,
+              "patients": 4
+            },
+            "Site 536": {
+              "total_queries": 49,
+              "open_queries": 6,
+              "patients": 7
+            },
+            "Site 2008": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 594": {
+              "total_queries": 27,
+              "open_queries": 9,
+              "patients": 2
+            },
+            "Site 338": {
+              "total_queries": 4,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 1034": {
+              "total_queries": 27,
+              "open_queries": 7,
+              "patients": 6
+            },
+            "Site 2013": {
+              "total_queries": 20,
+              "open_queries": 7,
+              "patients": 4
+            },
+            "Site 2014": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 2015": {
+              "total_queries": 21,
+              "open_queries": 5,
+              "patients": 5
+            },
+            "Site 1037": {
+              "total_queries": 8,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 1042": {
+              "total_queries": 10,
+              "open_queries": 6,
+              "patients": 1
+            },
+            "Site 2024": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 2030": {
+              "total_queries": 46,
+              "open_queries": 19,
+              "patients": 6
+            },
+            "Site 954": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 179": {
+              "total_queries": 5,
+              "open_queries": 3,
+              "patients": 3
+            },
+            "Site 328": {
+              "total_queries": 9,
+              "open_queries": 6,
+              "patients": 1
+            },
+            "Site 181": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 329": {
+              "total_queries": 4,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 331": {
+              "total_queries": 9,
+              "open_queries": 9,
+              "patients": 2
+            },
+            "Site 187": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 189": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 332": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 333": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 335": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 336": {
+              "total_queries": 11,
+              "open_queries": 10,
+              "patients": 1
+            },
+            "Site 339": {
+              "total_queries": 6,
+              "open_queries": 5,
+              "patients": 2
+            },
+            "Site 342": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 343": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 450": {
+              "total_queries": 4,
+              "open_queries": 4,
+              "patients": 2
+            },
+            "Site 180": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 183": {
+              "total_queries": 4,
+              "open_queries": 4,
+              "patients": 1
+            }
+          },
+          "total_sites": 83,
+          "total_queries": 1150,
+          "open_queries": 555
+        },
+        "CAN": {
+          "sites": {
+            "Site 50": {
+              "total_queries": 7,
+              "open_queries": 4,
+              "patients": 2
+            },
+            "Site 51": {
+              "total_queries": 11,
+              "open_queries": 1,
+              "patients": 3
+            },
+            "Site 2": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 502": {
+              "total_queries": 4,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 623": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 624": {
+              "total_queries": 5,
+              "open_queries": 3,
+              "patients": 2
+            },
+            "Site 625": {
+              "total_queries": 3,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 629": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 2
+            },
+            "Site 1962": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 2
+            },
+            "Site 952": {
+              "total_queries": 15,
+              "open_queries": 8,
+              "patients": 3
+            },
+            "Site 953": {
+              "total_queries": 17,
+              "open_queries": 2,
+              "patients": 9
+            },
+            "Site 954": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 955": {
+              "total_queries": 83,
+              "open_queries": 68,
+              "patients": 11
+            },
+            "Site 963": {
+              "total_queries": 56,
+              "open_queries": 23,
+              "patients": 12
+            },
+            "Site 317": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 318": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 320": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 322": {
+              "total_queries": 11,
+              "open_queries": 11,
+              "patients": 4
+            }
+          },
+          "total_sites": 18,
+          "total_queries": 230,
+          "open_queries": 135
+        },
+        "COL": {
+          "sites": {
+            "Site 520": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 521": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 2
+            }
+          },
+          "total_sites": 2,
+          "total_queries": 4,
+          "open_queries": 0
+        },
+        "ARG": {
+          "sites": {
+            "Site 524": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 678": {
+              "total_queries": 5,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 679": {
+              "total_queries": 6,
+              "open_queries": 0,
+              "patients": 4
+            },
+            "Site 680": {
+              "total_queries": 19,
+              "open_queries": 3,
+              "patients": 4
+            },
+            "Site 682": {
+              "total_queries": 8,
+              "open_queries": 4,
+              "patients": 3
+            },
+            "Site 683": {
+              "total_queries": 12,
+              "open_queries": 12,
+              "patients": 2
+            },
+            "Site 31": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 165": {
+              "total_queries": 9,
+              "open_queries": 9,
+              "patients": 1
+            },
+            "Site 316": {
+              "total_queries": 7,
+              "open_queries": 6,
+              "patients": 2
+            },
+            "Site 2": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 10,
+          "total_queries": 73,
+          "open_queries": 37
+        },
+        "MEX": {
+          "sites": {
+            "Site 528": {
+              "total_queries": 4,
+              "open_queries": 4,
+              "patients": 2
+            },
+            "Site 675": {
+              "total_queries": 7,
+              "open_queries": 6,
+              "patients": 3
+            },
+            "Site 676": {
+              "total_queries": 4,
+              "open_queries": 2,
+              "patients": 2
+            },
+            "Site 986": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 1772": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 5,
+          "total_queries": 18,
+          "open_queries": 13
+        },
+        "BRA": {
+          "sites": {
+            "Site 529": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 684": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 685": {
+              "total_queries": 17,
+              "open_queries": 16,
+              "patients": 6
+            },
+            "Site 686": {
+              "total_queries": 12,
+              "open_queries": 5,
+              "patients": 5
+            },
+            "Site 687": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 689": {
+              "total_queries": 4,
+              "open_queries": 2,
+              "patients": 2
+            },
+            "Site 690": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 1677": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 324": {
+              "total_queries": 4,
+              "open_queries": 4,
+              "patients": 2
+            }
+          },
+          "total_sites": 9,
+          "total_queries": 47,
+          "open_queries": 33
+        },
+        "CHL": {
+          "sites": {
+            "Site 532": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 995": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 2
+            }
+          },
+          "total_sites": 2,
+          "total_queries": 3,
+          "open_queries": 1
+        }
+      },
+      "total_countries": 7
+    },
+    "ASIA": {
+      "countries": {
+        "CHN": {
+          "sites": {
+            "Site 79": {
+              "total_queries": 3,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 459": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 460": {
+              "total_queries": 17,
+              "open_queries": 8,
+              "patients": 2
+            },
+            "Site 734": {
+              "total_queries": 7,
+              "open_queries": 7,
+              "patients": 2
+            },
+            "Site 735": {
+              "total_queries": 12,
+              "open_queries": 12,
+              "patients": 3
+            },
+            "Site 736": {
+              "total_queries": 10,
+              "open_queries": 3,
+              "patients": 5
+            },
+            "Site 737": {
+              "total_queries": 15,
+              "open_queries": 12,
+              "patients": 4
+            },
+            "Site 740": {
+              "total_queries": 34,
+              "open_queries": 11,
+              "patients": 4
+            },
+            "Site 741": {
+              "total_queries": 25,
+              "open_queries": 4,
+              "patients": 2
+            },
+            "Site 742": {
+              "total_queries": 12,
+              "open_queries": 10,
+              "patients": 4
+            },
+            "Site 743": {
+              "total_queries": 6,
+              "open_queries": 1,
+              "patients": 3
+            },
+            "Site 745": {
+              "total_queries": 9,
+              "open_queries": 4,
+              "patients": 4
+            },
+            "Site 746": {
+              "total_queries": 9,
+              "open_queries": 3,
+              "patients": 2
+            },
+            "Site 747": {
+              "total_queries": 3,
+              "open_queries": 2,
+              "patients": 2
+            },
+            "Site 749": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 750": {
+              "total_queries": 3,
+              "open_queries": 2,
+              "patients": 2
+            },
+            "Site 751": {
+              "total_queries": 6,
+              "open_queries": 6,
+              "patients": 1
+            },
+            "Site 752": {
+              "total_queries": 8,
+              "open_queries": 7,
+              "patients": 1
+            },
+            "Site 753": {
+              "total_queries": 4,
+              "open_queries": 1,
+              "patients": 3
+            },
+            "Site 755": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 756": {
+              "total_queries": 6,
+              "open_queries": 6,
+              "patients": 3
+            },
+            "Site 26": {
+              "total_queries": 6,
+              "open_queries": 6,
+              "patients": 1
+            },
+            "Site 27": {
+              "total_queries": 27,
+              "open_queries": 8,
+              "patients": 2
+            },
+            "Site 113": {
+              "total_queries": 60,
+              "open_queries": 1,
+              "patients": 18
+            },
+            "Site 503": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 506": {
+              "total_queries": 7,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 507": {
+              "total_queries": 4,
+              "open_queries": 4,
+              "patients": 2
+            },
+            "Site 420": {
+              "total_queries": 19,
+              "open_queries": 2,
+              "patients": 5
+            },
+            "Site 421": {
+              "total_queries": 24,
+              "open_queries": 23,
+              "patients": 2
+            },
+            "Site 423": {
+              "total_queries": 18,
+              "open_queries": 16,
+              "patients": 6
+            },
+            "Site 425": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 2183": {
+              "total_queries": 33,
+              "open_queries": 4,
+              "patients": 3
+            },
+            "Site 2184": {
+              "total_queries": 23,
+              "open_queries": 8,
+              "patients": 7
+            },
+            "Site 426": {
+              "total_queries": 27,
+              "open_queries": 4,
+              "patients": 7
+            },
+            "Site 2185": {
+              "total_queries": 4,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 2186": {
+              "total_queries": 8,
+              "open_queries": 4,
+              "patients": 3
+            },
+            "Site 61": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 70": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 71": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 72": {
+              "total_queries": 8,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 2202": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 2": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 3": {
+              "total_queries": 5,
+              "open_queries": 3,
+              "patients": 2
+            },
+            "Site 4": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 30": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 32": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 33": {
+              "total_queries": 21,
+              "open_queries": 4,
+              "patients": 7
+            },
+            "Site 36": {
+              "total_queries": 4,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 38": {
+              "total_queries": 4,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 40": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 41": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 42": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 346": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 348": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 165": {
+              "total_queries": 10,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 168": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 14": {
+              "total_queries": 88,
+              "open_queries": 29,
+              "patients": 8
+            },
+            "Site 17": {
+              "total_queries": 7,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 354": {
+              "total_queries": 7,
+              "open_queries": 3,
+              "patients": 2
+            },
+            "Site 93": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 60,
+          "total_queries": 632,
+          "open_queries": 241
+        },
+        "JPN": {
+          "sites": {
+            "Site 9": {
+              "total_queries": 11,
+              "open_queries": 5,
+              "patients": 2
+            },
+            "Site 461": {
+              "total_queries": 9,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 462": {
+              "total_queries": 20,
+              "open_queries": 20,
+              "patients": 2
+            },
+            "Site 463": {
+              "total_queries": 12,
+              "open_queries": 8,
+              "patients": 4
+            },
+            "Site 417": {
+              "total_queries": 17,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 703": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 4
+            },
+            "Site 704": {
+              "total_queries": 9,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 705": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 706": {
+              "total_queries": 8,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 707": {
+              "total_queries": 8,
+              "open_queries": 2,
+              "patients": 2
+            },
+            "Site 708": {
+              "total_queries": 5,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 709": {
+              "total_queries": 3,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 711": {
+              "total_queries": 14,
+              "open_queries": 1,
+              "patients": 6
+            },
+            "Site 712": {
+              "total_queries": 8,
+              "open_queries": 1,
+              "patients": 4
+            },
+            "Site 713": {
+              "total_queries": 4,
+              "open_queries": 2,
+              "patients": 2
+            },
+            "Site 714": {
+              "total_queries": 4,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 715": {
+              "total_queries": 3,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 716": {
+              "total_queries": 3,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 717": {
+              "total_queries": 3,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 192": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 25": {
+              "total_queries": 6,
+              "open_queries": 4,
+              "patients": 2
+            },
+            "Site 196": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 198": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 200": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 191": {
+              "total_queries": 12,
+              "open_queries": 12,
+              "patients": 1
+            },
+            "Site 352": {
+              "total_queries": 12,
+              "open_queries": 11,
+              "patients": 1
+            },
+            "Site 193": {
+              "total_queries": 12,
+              "open_queries": 12,
+              "patients": 3
+            },
+            "Site 194": {
+              "total_queries": 19,
+              "open_queries": 19,
+              "patients": 2
+            },
+            "Site 345": {
+              "total_queries": 3,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 356": {
+              "total_queries": 21,
+              "open_queries": 19,
+              "patients": 1
+            }
+          },
+          "total_sites": 30,
+          "total_queries": 236,
+          "open_queries": 131
+        },
+        "AUS": {
+          "sites": {
+            "Site 468": {
+              "total_queries": 103,
+              "open_queries": 73,
+              "patients": 6
+            },
+            "Site 87": {
+              "total_queries": 14,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 110": {
+              "total_queries": 11,
+              "open_queries": 11,
+              "patients": 1
+            },
+            "Site 696": {
+              "total_queries": 6,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 697": {
+              "total_queries": 5,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 698": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 699": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 700": {
+              "total_queries": 4,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 701": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 702": {
+              "total_queries": 23,
+              "open_queries": 1,
+              "patients": 6
+            },
+            "Site 109": {
+              "total_queries": 65,
+              "open_queries": 65,
+              "patients": 5
+            },
+            "Site 47": {
+              "total_queries": 8,
+              "open_queries": 8,
+              "patients": 1
+            },
+            "Site 466": {
+              "total_queries": 14,
+              "open_queries": 5,
+              "patients": 2
+            },
+            "Site 1": {
+              "total_queries": 33,
+              "open_queries": 10,
+              "patients": 3
+            },
+            "Site 3": {
+              "total_queries": 34,
+              "open_queries": 4,
+              "patients": 4
+            },
+            "Site 28": {
+              "total_queries": 7,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 259": {
+              "total_queries": 9,
+              "open_queries": 8,
+              "patients": 2
+            },
+            "Site 2": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 14": {
+              "total_queries": 40,
+              "open_queries": 23,
+              "patients": 7
+            },
+            "Site 15": {
+              "total_queries": 18,
+              "open_queries": 18,
+              "patients": 3
+            }
+          },
+          "total_sites": 20,
+          "total_queries": 404,
+          "open_queries": 228
+        },
+        "KOR": {
+          "sites": {
+            "Site 125": {
+              "total_queries": 4,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 719": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 720": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 3
+            },
+            "Site 721": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 722": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 723": {
+              "total_queries": 8,
+              "open_queries": 1,
+              "patients": 4
+            },
+            "Site 724": {
+              "total_queries": 9,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 725": {
+              "total_queries": 6,
+              "open_queries": 2,
+              "patients": 5
+            },
+            "Site 726": {
+              "total_queries": 11,
+              "open_queries": 5,
+              "patients": 4
+            },
+            "Site 417": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 12": {
+              "total_queries": 15,
+              "open_queries": 11,
+              "patients": 1
+            },
+            "Site 48": {
+              "total_queries": 48,
+              "open_queries": 0,
+              "patients": 15
+            },
+            "Site 49": {
+              "total_queries": 17,
+              "open_queries": 2,
+              "patients": 6
+            },
+            "Site 50": {
+              "total_queries": 54,
+              "open_queries": 5,
+              "patients": 17
+            },
+            "Site 51": {
+              "total_queries": 16,
+              "open_queries": 2,
+              "patients": 7
+            },
+            "Site 52": {
+              "total_queries": 127,
+              "open_queries": 21,
+              "patients": 28
+            },
+            "Site 53": {
+              "total_queries": 23,
+              "open_queries": 11,
+              "patients": 7
+            },
+            "Site 2164": {
+              "total_queries": 24,
+              "open_queries": 0,
+              "patients": 4
+            },
+            "Site 2165": {
+              "total_queries": 16,
+              "open_queries": 7,
+              "patients": 8
+            },
+            "Site 2166": {
+              "total_queries": 6,
+              "open_queries": 1,
+              "patients": 4
+            },
+            "Site 2167": {
+              "total_queries": 19,
+              "open_queries": 3,
+              "patients": 6
+            },
+            "Site 2168": {
+              "total_queries": 57,
+              "open_queries": 1,
+              "patients": 8
+            },
+            "Site 2169": {
+              "total_queries": 16,
+              "open_queries": 7,
+              "patients": 7
+            },
+            "Site 316": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 24,
+          "total_queries": 489,
+          "open_queries": 85
+        },
+        "SGP": {
+          "sites": {
+            "Site 130": {
+              "total_queries": 16,
+              "open_queries": 5,
+              "patients": 1
+            },
+            "Site 780": {
+              "total_queries": 29,
+              "open_queries": 14,
+              "patients": 5
+            },
+            "Site 11": {
+              "total_queries": 6,
+              "open_queries": 6,
+              "patients": 1
+            },
+            "Site 353": {
+              "total_queries": 20,
+              "open_queries": 17,
+              "patients": 2
+            },
+            "Site 261": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 3
+            },
+            "Site 349": {
+              "total_queries": 119,
+              "open_queries": 105,
+              "patients": 3
+            },
+            "Site 12": {
+              "total_queries": 34,
+              "open_queries": 22,
+              "patients": 3
+            },
+            "Site 439": {
+              "total_queries": 6,
+              "open_queries": 4,
+              "patients": 4
+            }
+          },
+          "total_sites": 8,
+          "total_queries": 233,
+          "open_queries": 176
+        },
+        "TWN": {
+          "sites": {
+            "Site 353": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 727": {
+              "total_queries": 12,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 728": {
+              "total_queries": 4,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 729": {
+              "total_queries": 15,
+              "open_queries": 0,
+              "patients": 5
+            },
+            "Site 730": {
+              "total_queries": 5,
+              "open_queries": 4,
+              "patients": 2
+            },
+            "Site 731": {
+              "total_queries": 5,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 732": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 733": {
+              "total_queries": 7,
+              "open_queries": 2,
+              "patients": 2
+            },
+            "Site 1673": {
+              "total_queries": 4,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 469": {
+              "total_queries": 21,
+              "open_queries": 21,
+              "patients": 2
+            },
+            "Site 1674": {
+              "total_queries": 28,
+              "open_queries": 13,
+              "patients": 7
+            },
+            "Site 1675": {
+              "total_queries": 21,
+              "open_queries": 6,
+              "patients": 5
+            },
+            "Site 1676": {
+              "total_queries": 12,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 589": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 351": {
+              "total_queries": 33,
+              "open_queries": 32,
+              "patients": 2
+            },
+            "Site 148": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 2
+            }
+          },
+          "total_sites": 16,
+          "total_queries": 172,
+          "open_queries": 82
+        },
+        "MYS": {
+          "sites": {
+            "Site 691": {
+              "total_queries": 16,
+              "open_queries": 3,
+              "patients": 3
+            },
+            "Site 692": {
+              "total_queries": 6,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 693": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 694": {
+              "total_queries": 9,
+              "open_queries": 0,
+              "patients": 4
+            },
+            "Site 695": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 436": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 437": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 438": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 8,
+          "total_queries": 37,
+          "open_queries": 5
+        },
+        "IND": {
+          "sites": {
+            "Site 761": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 762": {
+              "total_queries": 14,
+              "open_queries": 4,
+              "patients": 3
+            },
+            "Site 765": {
+              "total_queries": 13,
+              "open_queries": 3,
+              "patients": 8
+            },
+            "Site 766": {
+              "total_queries": 7,
+              "open_queries": 0,
+              "patients": 4
+            },
+            "Site 767": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 768": {
+              "total_queries": 13,
+              "open_queries": 0,
+              "patients": 4
+            },
+            "Site 769": {
+              "total_queries": 7,
+              "open_queries": 7,
+              "patients": 3
+            },
+            "Site 1645": {
+              "total_queries": 8,
+              "open_queries": 5,
+              "patients": 2
+            },
+            "Site 597": {
+              "total_queries": 36,
+              "open_queries": 12,
+              "patients": 3
+            },
+            "Site 1646": {
+              "total_queries": 4,
+              "open_queries": 3,
+              "patients": 3
+            },
+            "Site 2163": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 1648": {
+              "total_queries": 16,
+              "open_queries": 11,
+              "patients": 5
+            },
+            "Site 509": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 449": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 14,
+          "total_queries": 126,
+          "open_queries": 49
+        },
+        "HKG": {
+          "sites": {
+            "Site 10": {
+              "total_queries": 29,
+              "open_queries": 24,
+              "patients": 6
+            },
+            "Site 110": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 88": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 3,
+          "total_queries": 34,
+          "open_queries": 27
+        }
+      },
+      "total_countries": 9
+    },
+    "EMEA": {
+      "countries": {
+        "CZE": {
+          "sites": {
+            "Site 87": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 472": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 664": {
+              "total_queries": 8,
+              "open_queries": 8,
+              "patients": 3
+            },
+            "Site 9": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 360": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 361": {
+              "total_queries": 4,
+              "open_queries": 1,
+              "patients": 2
+            }
+          },
+          "total_sites": 6,
+          "total_queries": 17,
+          "open_queries": 14
+        },
+        "ITA": {
+          "sites": {
+            "Site 153": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 505": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 507": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 2
+            },
+            "Site 657": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 658": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 659": {
+              "total_queries": 7,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 661": {
+              "total_queries": 10,
+              "open_queries": 1,
+              "patients": 4
+            },
+            "Site 662": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 663": {
+              "total_queries": 6,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 87": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 292": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 293": {
+              "total_queries": 10,
+              "open_queries": 10,
+              "patients": 1
+            },
+            "Site 297": {
+              "total_queries": 35,
+              "open_queries": 0,
+              "patients": 11
+            },
+            "Site 414": {
+              "total_queries": 3,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 415": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 416": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 16,
+          "total_queries": 91,
+          "open_queries": 23
+        },
+        "ESP": {
+          "sites": {
+            "Site 465": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 515": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 648": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 649": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 650": {
+              "total_queries": 8,
+              "open_queries": 2,
+              "patients": 2
+            },
+            "Site 652": {
+              "total_queries": 7,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 653": {
+              "total_queries": 26,
+              "open_queries": 21,
+              "patients": 4
+            },
+            "Site 14": {
+              "total_queries": 17,
+              "open_queries": 14,
+              "patients": 3
+            },
+            "Site 15": {
+              "total_queries": 144,
+              "open_queries": 102,
+              "patients": 11
+            },
+            "Site 16": {
+              "total_queries": 7,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 17": {
+              "total_queries": 23,
+              "open_queries": 20,
+              "patients": 2
+            },
+            "Site 529": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 301": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 302": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 305": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 306": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 307": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 17,
+          "total_queries": 248,
+          "open_queries": 170
+        },
+        "BEL": {
+          "sites": {
+            "Site 62": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 636": {
+              "total_queries": 3,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 637": {
+              "total_queries": 16,
+              "open_queries": 12,
+              "patients": 4
+            },
+            "Site 639": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 640": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 641": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 6,
+          "total_queries": 25,
+          "open_queries": 16
+        },
+        "FRA": {
+          "sites": {
+            "Site 480": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 488": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 642": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 643": {
+              "total_queries": 6,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 644": {
+              "total_queries": 6,
+              "open_queries": 5,
+              "patients": 1
+            },
+            "Site 646": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 9": {
+              "total_queries": 6,
+              "open_queries": 5,
+              "patients": 2
+            },
+            "Site 2": {
+              "total_queries": 33,
+              "open_queries": 33,
+              "patients": 3
+            },
+            "Site 3": {
+              "total_queries": 30,
+              "open_queries": 28,
+              "patients": 3
+            },
+            "Site 4": {
+              "total_queries": 57,
+              "open_queries": 46,
+              "patients": 2
+            },
+            "Site 273": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 274": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 277": {
+              "total_queries": 8,
+              "open_queries": 1,
+              "patients": 3
+            },
+            "Site 364": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 365": {
+              "total_queries": 6,
+              "open_queries": 6,
+              "patients": 3
+            },
+            "Site 366": {
+              "total_queries": 6,
+              "open_queries": 6,
+              "patients": 4
+            },
+            "Site 370": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 3
+            },
+            "Site 372": {
+              "total_queries": 7,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 373": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 375": {
+              "total_queries": 9,
+              "open_queries": 9,
+              "patients": 3
+            },
+            "Site 376": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 1
+            }
+          },
+          "total_sites": 21,
+          "total_queries": 192,
+          "open_queries": 157
+        },
+        "DEU": {
+          "sites": {
+            "Site 495": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 496": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 669": {
+              "total_queries": 17,
+              "open_queries": 15,
+              "patients": 4
+            },
+            "Site 671": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 672": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 674": {
+              "total_queries": 9,
+              "open_queries": 2,
+              "patients": 2
+            },
+            "Site 520": {
+              "total_queries": 44,
+              "open_queries": 42,
+              "patients": 4
+            },
+            "Site 521": {
+              "total_queries": 25,
+              "open_queries": 6,
+              "patients": 6
+            },
+            "Site 522": {
+              "total_queries": 17,
+              "open_queries": 12,
+              "patients": 2
+            },
+            "Site 875": {
+              "total_queries": 24,
+              "open_queries": 3,
+              "patients": 10
+            },
+            "Site 876": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 4
+            },
+            "Site 879": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 880": {
+              "total_queries": 14,
+              "open_queries": 4,
+              "patients": 6
+            },
+            "Site 883": {
+              "total_queries": 17,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 884": {
+              "total_queries": 8,
+              "open_queries": 7,
+              "patients": 3
+            },
+            "Site 887": {
+              "total_queries": 3,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 888": {
+              "total_queries": 101,
+              "open_queries": 45,
+              "patients": 18
+            },
+            "Site 281": {
+              "total_queries": 37,
+              "open_queries": 8,
+              "patients": 14
+            },
+            "Site 2187": {
+              "total_queries": 120,
+              "open_queries": 11,
+              "patients": 7
+            },
+            "Site 904": {
+              "total_queries": 15,
+              "open_queries": 15,
+              "patients": 1
+            },
+            "Site 286": {
+              "total_queries": 18,
+              "open_queries": 3,
+              "patients": 5
+            },
+            "Site 417": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 508": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 419": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 280": {
+              "total_queries": 7,
+              "open_queries": 7,
+              "patients": 2
+            },
+            "Site 282": {
+              "total_queries": 7,
+              "open_queries": 7,
+              "patients": 2
+            },
+            "Site 380": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 382": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 395": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 402": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 30,
+          "total_queries": 506,
+          "open_queries": 196
+        },
+        "NLD": {
+          "sites": {
+            "Site 128": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 314": {
+              "total_queries": 11,
+              "open_queries": 6,
+              "patients": 1
+            },
+            "Site 434": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 3,
+          "total_queries": 13,
+          "open_queries": 8
+        },
+        "GBR": {
+          "sites": {
+            "Site 155": {
+              "total_queries": 5,
+              "open_queries": 5,
+              "patients": 1
+            },
+            "Site 665": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 667": {
+              "total_queries": 5,
+              "open_queries": 4,
+              "patients": 2
+            },
+            "Site 25": {
+              "total_queries": 6,
+              "open_queries": 6,
+              "patients": 1
+            },
+            "Site 309": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 310": {
+              "total_queries": 4,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 429": {
+              "total_queries": 15,
+              "open_queries": 15,
+              "patients": 1
+            },
+            "Site 431": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 432": {
+              "total_queries": 20,
+              "open_queries": 4,
+              "patients": 1
+            },
+            "Site 433": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 10,
+          "total_queries": 61,
+          "open_queries": 40
+        },
+        "IRL": {
+          "sites": {
+            "Site 541": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 1,
+          "total_queries": 1,
+          "open_queries": 1
+        },
+        "ISR": {
+          "sites": {
+            "Site 588": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 589": {
+              "total_queries": 11,
+              "open_queries": 6,
+              "patients": 2
+            },
+            "Site 770": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 771": {
+              "total_queries": 9,
+              "open_queries": 2,
+              "patients": 3
+            },
+            "Site 772": {
+              "total_queries": 5,
+              "open_queries": 4,
+              "patients": 1
+            },
+            "Site 773": {
+              "total_queries": 3,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 774": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 778": {
+              "total_queries": 26,
+              "open_queries": 14,
+              "patients": 3
+            },
+            "Site 7": {
+              "total_queries": 17,
+              "open_queries": 5,
+              "patients": 1
+            },
+            "Site 8": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 2188": {
+              "total_queries": 15,
+              "open_queries": 12,
+              "patients": 3
+            },
+            "Site 524": {
+              "total_queries": 6,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 525": {
+              "total_queries": 15,
+              "open_queries": 3,
+              "patients": 3
+            },
+            "Site 1791": {
+              "total_queries": 6,
+              "open_queries": 2,
+              "patients": 3
+            },
+            "Site 288": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 289": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 290": {
+              "total_queries": 7,
+              "open_queries": 3,
+              "patients": 2
+            },
+            "Site 62": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 18,
+          "total_queries": 129,
+          "open_queries": 56
+        },
+        "GRC": {
+          "sites": {
+            "Site 633": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 634": {
+              "total_queries": 2,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 635": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 407": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 408": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 409": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 410": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 2
+            }
+          },
+          "total_sites": 7,
+          "total_queries": 17,
+          "open_queries": 8
+        },
+        "HRV": {
+          "sites": {
+            "Site 654": {
+              "total_queries": 6,
+              "open_queries": 1,
+              "patients": 4
+            }
+          },
+          "total_sites": 1,
+          "total_queries": 6,
+          "open_queries": 1
+        },
+        "TUR": {
+          "sites": {
+            "Site 757": {
+              "total_queries": 5,
+              "open_queries": 2,
+              "patients": 4
+            },
+            "Site 758": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 759": {
+              "total_queries": 5,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 760": {
+              "total_queries": 5,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 5": {
+              "total_queries": 10,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 6": {
+              "total_queries": 21,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 2170": {
+              "total_queries": 12,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 2171": {
+              "total_queries": 21,
+              "open_queries": 6,
+              "patients": 3
+            },
+            "Site 2172": {
+              "total_queries": 10,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 2161": {
+              "total_queries": 13,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 2173": {
+              "total_queries": 9,
+              "open_queries": 0,
+              "patients": 4
+            },
+            "Site 2174": {
+              "total_queries": 7,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 2175": {
+              "total_queries": 3,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 2176": {
+              "total_queries": 18,
+              "open_queries": 12,
+              "patients": 2
+            },
+            "Site 2178": {
+              "total_queries": 26,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 2179": {
+              "total_queries": 14,
+              "open_queries": 1,
+              "patients": 2
+            },
+            "Site 2180": {
+              "total_queries": 4,
+              "open_queries": 4,
+              "patients": 1
+            },
+            "Site 2181": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 2
+            },
+            "Site 2182": {
+              "total_queries": 6,
+              "open_queries": 0,
+              "patients": 3
+            },
+            "Site 2218": {
+              "total_queries": 5,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 2221": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 2225": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 2226": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 445": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 24,
+          "total_queries": 202,
+          "open_queries": 33
+        },
+        "AUT": {
+          "sites": {
+            "Site 5": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 6": {
+              "total_queries": 48,
+              "open_queries": 45,
+              "patients": 2
+            },
+            "Site 14": {
+              "total_queries": 4,
+              "open_queries": 3,
+              "patients": 1
+            },
+            "Site 15": {
+              "total_queries": 7,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 4,
+          "total_queries": 61,
+          "open_queries": 50
+        },
+        "PRT": {
+          "sites": {
+            "Site 349": {
+              "total_queries": 10,
+              "open_queries": 9,
+              "patients": 2
+            },
+            "Site 530": {
+              "total_queries": 25,
+              "open_queries": 12,
+              "patients": 4
+            }
+          },
+          "total_sites": 2,
+          "total_queries": 35,
+          "open_queries": 21
+        },
+        "SVN": {
+          "sites": {
+            "Site 1008": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 1,
+          "total_queries": 2,
+          "open_queries": 0
+        },
+        "ZAF": {
+          "sites": {
+            "Site 2254": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 317": {
+              "total_queries": 7,
+              "open_queries": 4,
+              "patients": 1
+            },
+            "Site 318": {
+              "total_queries": 5,
+              "open_queries": 0,
+              "patients": 4
+            }
+          },
+          "total_sites": 3,
+          "total_queries": 13,
+          "open_queries": 5
+        },
+        "SVK": {
+          "sites": {
+            "Site 299": {
+              "total_queries": 4,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 426": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            }
+          },
+          "total_sites": 2,
+          "total_queries": 5,
+          "open_queries": 2
+        },
+        "CHE": {
+          "sites": {
+            "Site 312": {
+              "total_queries": 1,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 428": {
+              "total_queries": 3,
+              "open_queries": 0,
+              "patients": 2
+            }
+          },
+          "total_sites": 2,
+          "total_queries": 4,
+          "open_queries": 1
+        },
+        "BGR": {
+          "sites": {
+            "Site 10": {
+              "total_queries": 3,
+              "open_queries": 3,
+              "patients": 2
+            },
+            "Site 110": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 359": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            }
+          },
+          "total_sites": 3,
+          "total_queries": 7,
+          "open_queries": 7
+        },
+        "HUN": {
+          "sites": {
+            "Site 411": {
+              "total_queries": 6,
+              "open_queries": 1,
+              "patients": 1
+            },
+            "Site 412": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            }
+          },
+          "total_sites": 2,
+          "total_queries": 8,
+          "open_queries": 3
+        },
+        "ROU": {
+          "sites": {
+            "Site 420": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            },
+            "Site 421": {
+              "total_queries": 7,
+              "open_queries": 2,
+              "patients": 4
+            },
+            "Site 424": {
+              "total_queries": 1,
+              "open_queries": 0,
+              "patients": 1
+            },
+            "Site 425": {
+              "total_queries": 2,
+              "open_queries": 2,
+              "patients": 1
+            }
+          },
+          "total_sites": 4,
+          "total_queries": 12,
+          "open_queries": 6
+        },
+        "OMN": {
+          "sites": {
+            "Site 442": {
+              "total_queries": 2,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 1,
+          "total_queries": 2,
+          "open_queries": 0
+        },
+        "ARE": {
+          "sites": {
+            "Site 323": {
+              "total_queries": 5,
+              "open_queries": 0,
+              "patients": 1
+            }
+          },
+          "total_sites": 1,
+          "total_queries": 5,
+          "open_queries": 0
+        },
+        "BFA": {
+          "sites": {
+            "Site 2": {
+              "total_queries": 17,
+              "open_queries": 0,
+              "patients": 6
+            }
+          },
+          "total_sites": 1,
+          "total_queries": 17,
+          "open_queries": 0
+        }
+      },
+      "total_countries": 25
+    },
+    "NaN": {
+      "countries": {},
+      "total_countries": 0
+    }
+  },
+  "studiesProcessed": 23
+}

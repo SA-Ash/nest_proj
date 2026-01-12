@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Clinical Trial Operational Intelligence Dashboard - Real-time insights for clinical operations leaders">
+  <title>Clinical Trial Intelligence Dashboard | NEST 2.0</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="dashboard-header">
+      <div class="dashboard-title">
+        <div>
+          <h1>🏥 Clinical Trial Intelligence</h1>
+          <p class="subtitle">Phase III Cardiovascular Outcomes Trial | STUDY-2025-001</p>
+        </div>
+      </div>
+      <div class="header-controls">
+        <div class="last-updated">
+          <span class="pulse"></span>
+          <span id="lastUpdatedTime">Last updated: Loading...</span>
+        </div>
+        <div class="tabs">
+          <button class="tab active" data-view="overview">Overview</button>
+          <button class="tab" data-view="sites">Sites</button>
+          <button class="tab" data-view="patients">Patients</button>
+          <button class="tab" data-view="safety">Safety</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================
+         SECTION 1: EXECUTIVE OVERVIEW
+         ============================================ -->
+    <section class="dashboard-section" id="executiveOverview">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">📊</span>
+          Executive Overview
+        </h2>
+        <span class="section-badge">Real-time Health Snapshot</span>
+      </div>
+
+      <!-- Data Flow Diagram -->
+      <div class="card mb-lg">
+        <div class="flow-diagram">
+          <div class="flow-step">
+            <span class="icon">📁</span>
+            <span class="label">Raw Data</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">
+            <span class="icon">⚙️</span>
+            <span class="label">ETL</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">
+            <span class="icon">👤</span>
+            <span class="label">Patient Snapshot</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">
+            <span class="icon">📊</span>
+            <span class="label">DQI Calc</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">
+            <span class="icon">🖥️</span>
+            <span class="label">Dashboard</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">
+            <span class="icon">🤖</span>
+            <span class="label">AI Insights</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">
+            <span class="icon">✅</span>
+            <span class="label">Actions</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="dashboard-grid grid-5" id="kpiGrid">
+        <!-- DQI Card -->
+        <div class="kpi-card status-amber" id="kpiDQI"
+          data-tooltip="Weighted composite of: Safety resolution, Visit/page completeness, Query burden, Lab readiness, SDV/signature status">
+          <span class="kpi-label">📈 Data Quality Index</span>
+          <span class="kpi-value" id="dqiValue">--</span>
+          <div class="kpi-trend" id="dqiTrend">
+            <span>--</span>
+          </div>
+          <div class="kpi-sparkline">
+            <canvas id="dqiSparkline"></canvas>
+          </div>
+        </div>
+
+        <!-- Clean Patients Card -->
+        <div class="kpi-card status-amber" id="kpiClean">
+          <span class="kpi-label">✅ Clean Patients</span>
+          <span class="kpi-value" id="cleanValue">--</span>
+          <div class="kpi-trend" id="cleanTrend">
+            <span>--</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill warning" id="cleanProgress" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Sites at Risk Card -->
+        <div class="kpi-card status-amber" id="kpiSitesRisk">
+          <span class="kpi-label">⚠️ Sites at Risk</span>
+          <span class="kpi-value text-warning" id="sitesAtRiskValue">--</span>
+          <div class="kpi-trend" id="sitesRiskTrend">
+            <span>--</span>
+          </div>
+        </div>
+
+        <!-- Open SAE Card -->
+        <div class="kpi-card status-red" id="kpiSAE">
+          <span class="kpi-label">🚨 Open SAEs</span>
+          <span class="kpi-value text-danger" id="openSAEValue">--</span>
+          <div class="kpi-trend" id="saeTrend">
+            <span>--</span>
+          </div>
+          <div class="badge badge-danger" id="criticalSAEBadge">-- critical</div>
+        </div>
+
+        <!-- Readiness Status Card -->
+        <div class="kpi-card" id="kpiReadiness">
+          <span class="kpi-label">🎯 Submission Readiness</span>
+          <div class="status-indicator at-risk" id="readinessStatus">
+            <span id="readinessIcon">⚠️</span>
+            <span id="readinessText">AT RISK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DQI Methodology Note -->
+      <div class="card"
+        style="margin-top: 1rem; padding: 0.75rem 1rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2);">
+        <div class="text-xs text-secondary" style="display: flex; align-items: center; gap: 0.5rem;">
+          <span>ℹ️</span>
+          <span><strong>DQI Methodology:</strong> DQI represents a weighted composite of safety resolution status,
+            visit/page completeness, query burden & aging, lab data readiness, and SDV/signature status.</span>
+        </div>
+      </div>
+
+      <!-- Trend Comparison -->
+      <div class="dashboard-grid grid-2 mt-lg" style="margin-top: 1.5rem;">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">📈 DQI Trend (Last 6 Weeks)</span>
+            <span class="badge badge-success">Improving</span>
+          </div>
+          <div class="card-body">
+            <canvas id="dqiTrendChart" height="150"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">📉 Query Resolution Progress</span>
+            <span class="badge badge-warning">94.2% → Target 98%</span>
+          </div>
+          <div class="card-body">
+            <canvas id="queryTrendChart" height="150"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 2: GEOGRAPHICAL & SITE PERFORMANCE
+         ============================================ -->
+    <section class="dashboard-section" id="geographicalView">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">🌍</span>
+          Geographical & Site Performance
+        </h2>
+        <span class="section-badge">Region → Country → Site</span>
+      </div>
+
+      <div class="dashboard-grid grid-3-1">
+        <!-- Regional Heatmap -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Regional Performance Heatmap</span>
+            <div class="tabs">
+              <button class="tab active" data-metric="dqi">DQI</button>
+              <button class="tab" data-metric="clean">Clean %</button>
+              <button class="tab" data-metric="sae">SAE</button>
+            </div>
+          </div>
+          <div class="card-body" id="regionHeatmap">
+            <!-- Dynamic content -->
+          </div>
+        </div>
+
+        <!-- Regional Summary -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Summary</span>
+          </div>
+          <div class="card-body" id="regionSummary">
+            <div class="mb-md">
+              <div class="text-muted text-sm">Total Regions</div>
+              <div class="font-bold" style="font-size: 1.5rem;">5</div>
+            </div>
+            <div class="mb-md">
+              <div class="text-muted text-sm">Countries</div>
+              <div class="font-bold" style="font-size: 1.5rem;">24</div>
+            </div>
+            <div class="mb-md">
+              <div class="text-muted text-sm">Active Sites</div>
+              <div class="font-bold" style="font-size: 1.5rem;">156</div>
+            </div>
+            <div>
+              <div class="text-muted text-sm">Total Patients</div>
+              <div class="font-bold" style="font-size: 1.5rem;">2,847</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Site Rankings -->
+      <div class="dashboard-grid grid-2" style="margin-top: 1.5rem;">
+        <!-- Top Sites -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">🏆 Top Performing Sites</span>
+            <span class="badge badge-success">Top 5</span>
+          </div>
+          <div class="card-body">
+            <table class="data-table compact">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Site</th>
+                  <th>DQI</th>
+                  <th>Clean %</th>
+                  <th>Queries</th>
+                </tr>
+              </thead>
+              <tbody id="topSitesTable">
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Bottom Sites -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">⚠️ Sites Requiring Attention</span>
+            <span class="badge badge-danger">Immediate Action</span>
+          </div>
+          <div class="card-body">
+            <table class="data-table compact">
+              <thead>
+                <tr>
+                  <th>Site</th>
+                  <th>DQI</th>
+                  <th>Clean %</th>
+                  <th>Queries</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="bottomSitesTable">
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 3: PATIENT-LEVEL OPERATIONAL HEALTH
+         ============================================ -->
+    <section class="dashboard-section" id="patientHealth">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">👤</span>
+          Patient-Level Operational Health
+        </h2>
+        <span class="section-badge">Flagged Patients Priority View</span>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Patients with Open Issues</span>
+          <div class="flex gap-sm">
+            <span class="badge badge-danger" id="flaggedPatientCount">-- flagged</span>
+            <span class="badge badge-warning" id="saePatientCount">-- with SAE</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="data-table" id="patientTable">
+            <thead>
+              <tr>
+                <th>Patient ID</th>
+                <th>Site</th>
+                <th>DQI</th>
+                <th>Missing Visits</th>
+                <th>Open Queries</th>
+                <th>Lab Issues</th>
+                <th>SAE Status</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="patientTableBody">
+              <!-- Dynamic content -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 4: OPERATIONAL BOTTLENECK ANALYSIS
+         ============================================ -->
+    <section class="dashboard-section" id="bottleneckAnalysis">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">🔍</span>
+          Operational Bottleneck Analysis
+        </h2>
+        <span class="section-badge">Identify Delays & Blockers</span>
+      </div>
+
+      <div class="dashboard-grid grid-4">
+        <!-- Query Burden -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">📋 Query Burden</span>
+          </div>
+          <div class="card-body">
+            <div class="gauge-container">
+              <div class="gauge-chart">
+                <canvas id="queryGauge"></canvas>
+                <div class="gauge-value">
+                  <span class="number" id="queryOpenCount">--</span>
+                  <span class="unit">open</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-md" style="margin-top: 1rem;">
+              <div class="flex justify-between mb-sm">
+                <span class="text-muted text-sm">0-7 days</span>
+                <span id="queryAge1">--</span>
+              </div>
+              <div class="flex justify-between mb-sm">
+                <span class="text-muted text-sm">8-14 days</span>
+                <span id="queryAge2">--</span>
+              </div>
+              <div class="flex justify-between mb-sm">
+                <span class="text-muted text-sm">15-30 days</span>
+                <span id="queryAge3">--</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted text-sm text-danger">&gt;30 days</span>
+                <span class="text-danger" id="queryAge4">--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visit Compliance -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">📅 Visit Compliance</span>
+          </div>
+          <div class="card-body">
+            <div class="gauge-container">
+              <div class="gauge-chart">
+                <canvas id="visitGauge"></canvas>
+                <div class="gauge-value">
+                  <span class="number" id="visitOverdueCount">--</span>
+                  <span class="unit">overdue</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-md" style="margin-top: 1rem;">
+              <div class="flex justify-between mb-sm">
+                <span class="text-muted text-sm">1-7 days</span>
+                <span id="visitAge1">--</span>
+              </div>
+              <div class="flex justify-between mb-sm">
+                <span class="text-muted text-sm">8-14 days</span>
+                <span id="visitAge2">--</span>
+              </div>
+              <div class="flex justify-between mb-sm">
+                <span class="text-muted text-sm">15-30 days</span>
+                <span id="visitAge3">--</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted text-sm text-danger">&gt;30 days</span>
+                <span class="text-danger" id="visitAge4">--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lab & Coding -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">🔬 Lab & Coding</span>
+          </div>
+          <div class="card-body">
+            <div class="mb-md">
+              <div class="flex justify-between mb-sm">
+                <span class="text-secondary">Missing Lab Ranges</span>
+                <span class="badge badge-warning" id="labRangesCount">--</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill warning" id="labProgress" style="width: 0%"></div>
+              </div>
+            </div>
+            <div class="mb-md">
+              <div class="flex justify-between mb-sm">
+                <span class="text-secondary">Uncoded Terms</span>
+                <span class="badge badge-warning" id="uncodedCount">--</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill warning" id="codingProgress" style="width: 0%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-sm">
+                <span class="text-secondary">EDRR Unreconciled</span>
+                <span class="badge badge-neutral" id="edrrCount">--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SDV & Signatures -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">✍️ SDV & Signatures</span>
+          </div>
+          <div class="card-body">
+            <div class="mb-md">
+              <div class="flex justify-between mb-sm">
+                <span class="text-secondary">SDV Pending</span>
+                <span id="sdvPending">--</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill primary" id="sdvProgress" style="width: 0%"></div>
+              </div>
+              <div class="text-xs text-muted mt-xs" style="margin-top: 0.25rem;">
+                <span id="sdvRate">--%</span> verified
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-sm">
+                <span class="text-secondary">PI Signatures</span>
+                <span id="sigPending">--</span>
+              </div>
+              <div class="flex gap-sm">
+                <span class="badge badge-danger" id="sigOverdue">-- overdue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 5: SAFETY & SUBMISSION READINESS
+         ============================================ -->
+    <section class="dashboard-section" id="safetyReadiness">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">🛡️</span>
+          Safety & Submission Readiness
+        </h2>
+        <span class="section-badge">Hard-Gated Criteria</span>
+      </div>
+
+      <div class="dashboard-grid grid-2">
+        <!-- Readiness Checklist -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">📋 Readiness Rules</span>
+            <div class="status-indicator not-ready" id="overallReadiness">
+              <span>❌</span>
+              <span>NOT READY</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="readiness-checklist" id="readinessChecklist">
+              <!-- Dynamic content -->
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="alert alert-danger">
+              <span class="alert-icon">🚫</span>
+              <div class="alert-content">
+                <div class="alert-title">Database Lock Blocked</div>
+                <div class="alert-message">6 criteria must be resolved before interim analysis can proceed.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Open SAE List -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">🚨 Open SAEs Blocking Submission</span>
+            <span class="badge badge-danger" id="blockingSAECount">-- blocking</span>
+          </div>
+          <div class="card-body">
+            <table class="data-table compact" id="saeTable">
+              <thead>
+                <tr>
+                  <th>SAE ID</th>
+                  <th>Site</th>
+                  <th>Event</th>
+                  <th>Days Open</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="saeTableBody">
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 6: AI-POWERED INSIGHTS
+         ============================================ -->
+    <section class="dashboard-section" id="aiInsights">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">🤖</span>
+          AI-Powered Insights
+        </h2>
+        <span class="section-badge">Explainable Analysis</span>
+      </div>
+
+      <div class="dashboard-grid grid-2" id="insightsGrid">
+        <!-- Dynamic AI insight panels will be inserted here -->
+      </div>
+
+      <!-- AI Compliance Disclaimer -->
+      <div class="card"
+        style="margin-top: 1rem; padding: 0.75rem 1rem; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
+        <div class="text-xs text-secondary" style="display: flex; align-items: center; gap: 0.5rem;">
+          <span>🔒</span>
+          <span><strong>AI Compliance:</strong> AI insights are generated exclusively from validated, pre-computed
+            metrics and do not perform clinical, statistical, or regulatory calculations. All outputs are deterministic,
+            explainable, and auditable.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 7: AGENTIC AI RECOMMENDATIONS
+         ============================================ -->
+    <section class="dashboard-section" id="agenticRecommendations">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">🎯</span>
+          Agentic AI – Action Recommendations
+        </h2>
+        <span class="section-badge">Role-Based Next Actions</span>
+      </div>
+
+      <div class="tabs mb-md" style="margin-bottom: 1rem;">
+        <button class="tab active" data-role="all">All Roles</button>
+        <button class="tab" data-role="CRA">CRA</button>
+        <button class="tab" data-role="Safety">Safety</button>
+        <button class="tab" data-role="DQT">DQT</button>
+        <button class="tab" data-role="Site">Site</button>
+      </div>
+
+      <div class="dashboard-grid grid-2" id="recommendationsGrid">
+        <!-- Dynamic action cards will be inserted here -->
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 8: COLLABORATION & WORKFLOW
+         ============================================ -->
+    <section class="dashboard-section" id="collaboration">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="icon">👥</span>
+          Collaboration & Workflow
+        </h2>
+        <span class="section-badge">Team Coordination</span>
+      </div>
+
+      <div class="dashboard-grid grid-3">
+        <!-- Escalation Alerts -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">🚨 Escalation Alerts</span>
+            <span class="badge badge-danger">3 active</span>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-danger mb-md">
+              <span class="alert-icon">⚠️</span>
+              <div class="alert-content">
+                <div class="alert-title">Safety Escalation Required</div>
+                <div class="alert-message">SAE-0042 open >30 days at CHN-003</div>
+              </div>
+            </div>
+            <div class="alert alert-warning mb-md">
+              <span class="alert-icon">📋</span>
+              <div class="alert-content">
+                <div class="alert-title">CRA Intervention Needed</div>
+                <div class="alert-message">47 queries aging at Shanghai Regional</div>
+              </div>
+            </div>
+            <div class="alert alert-warning">
+              <span class="alert-icon">✍️</span>
+              <div class="alert-content">
+                <div class="alert-title">PI Signature SLA Breach</div>
+                <div class="alert-message">4 signatures overdue >7 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tagged Items -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">🏷️ Tagged for Follow-up</span>
+          </div>
+          <div class="card-body">
+            <div class="action-card mb-md">
+              <div class="action-content">
+                <div class="action-title">Site CHN-003</div>
+                <div class="action-description">Tagged by @CRA_Team for urgent review</div>
+                <div class="action-meta">
+                  <span class="action-role">CRA</span>
+                  <span>2 hours ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="action-card mb-md">
+              <div class="action-content">
+                <div class="action-title">Patient PAT-0001</div>
+                <div class="action-description">SAE resolution pending safety review</div>
+                <div class="action-meta">
+                  <span class="action-role">Safety</span>
+                  <span>5 hours ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="action-card">
+              <div class="action-content">
+                <div class="action-title">Lab Ranges - India Sites</div>
+                <div class="action-description">Reference ranges needed from central lab</div>
+                <div class="action-meta">
+                  <span class="action-role">DQT</span>
+                  <span>1 day ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity Feed -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">📝 Recent Activity</span>
+          </div>
+          <div class="card-body">
+            <div class="mb-md" style="border-left: 2px solid var(--status-green); padding-left: 1rem;">
+              <div class="text-sm font-semibold">Query Resolved</div>
+              <div class="text-xs text-muted">Q-2847 at USA-015 by @DataMgr</div>
+              <div class="text-xs text-secondary">10 min ago</div>
+            </div>
+            <div class="mb-md" style="border-left: 2px solid var(--primary-accent); padding-left: 1rem;">
+              <div class="text-sm font-semibold">Site Visit Scheduled</div>
+              <div class="text-xs text-muted">CHN-003 by @CRA_Chen</div>
+              <div class="text-xs text-secondary">1 hour ago</div>
+            </div>
+            <div class="mb-md" style="border-left: 2px solid var(--status-amber); padding-left: 1rem;">
+              <div class="text-sm font-semibold">SAE Status Update</div>
+              <div class="text-xs text-muted">SAE-0051 narrative submitted</div>
+              <div class="text-xs text-secondary">3 hours ago</div>
+            </div>
+            <div style="border-left: 2px solid var(--status-green); padding-left: 1rem;">
+              <div class="text-sm font-semibold">PI Signature Complete</div>
+              <div class="text-xs text-muted">JPN-008 - 12 forms signed</div>
+              <div class="text-xs text-secondary">Yesterday</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.875rem;">
+      <p>Clinical Trial Operational Intelligence Dashboard | NEST 2.0 Hackathon</p>
+      <p style="margin-top: 0.5rem;">Powered by AI-Driven Analytics • Data Quality • Patient Safety</p>
+    </footer>
+  </div>
+
+  <!-- Drill-down Panel (Hidden by default) -->
+  <div class="drill-down-panel" id="drillDownPanel">
+    <div class="drill-down-header">
+      <div class="flex justify-between items-center">
+        <h3 id="drillDownTitle">Details</h3>
+        <button class="btn btn-icon btn-secondary" onclick="closeDrillDown()">✕</button>
+      </div>
+    </div>
+    <div class="drill-down-body" id="drillDownContent">
+      <!-- Dynamic content -->
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Governance: AI components operate exclusively on validated, pre-computed metrics -->
+  <script src="js/data/mockData.js"></script>
+  <script src="js/data/realDataEmbed.js"></script>
+  <script src="js/data/dataAdapter.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
