@@ -278,6 +278,3 @@ The dashboard processes **9 source files per study** across **23 studies**:
 *Plain-language risk summaries with source attribution*
 
 ---
-
-
-> *"I understand the health of this clinical trial in under 60 seconds — and I know exactly what to do next."* ✅
