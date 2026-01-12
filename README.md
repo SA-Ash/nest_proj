@@ -279,24 +279,5 @@ The dashboard processes **9 source files per study** across **23 studies**:
 
 ---
 
-## 👥 Authors
-
-**NEST 2.0 Hackathon Team**
-
----
-
-## 📄 License
-
-This project is created for the NEST 2.0 Hackathon.
-
----
-
-## 🙏 Acknowledgments
-
-- Clinical trial data provided by NEST 2.0 organizers
-- Chart.js for visualization library
-- Inter font from Google Fonts
-
----
 
 > *"I understand the health of this clinical trial in under 60 seconds — and I know exactly what to do next."* ✅
